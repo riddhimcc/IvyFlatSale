@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albums and Videos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .media-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .media {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .media img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .media .media-info {
+      padding: 10px;
+    }
+
+    .media .media-title {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .media .artist {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .media iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 600px) {
+      .media-list {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 900px) {
+      .media-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Albums and Videos</h1>
+    <ul class="media-list">
+      <li class="media">
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihblByMpqEjfYHNQYXL80vUSFXxWzmVQ5oTJGrM3vN7yUPNmeuUhsGp3LIVCl25KdbuAbJ5WxkwCqjUGRecXJpGTLmndhg=w1872-h958" alt="Album 1">
+        <div class="media-info">
+          <h2 class="media-title">Album Title 1</h2>
+          <p class="artist">Artist Name 1</p>
+        </div>
+      </li>
+	  <li class="media">
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYcAgagWLlYcTQSTGhWGx5yC_iJlhFh4bYM3ildWvUi7oWv27wk6uTf1U5qrMEz0B1aIM6s7lTgwcDuH3-cd4e_vcr3Hw=w1872-h958" alt="Album 2">
+        <div class="media-info">
+          <h2 class="media-title">Album Title 1</h2>
+          <p class="artist">Artist Name 1</p>
+        </div>
+      </li>
+      <li class="media">
+        <div class="media-info">
+          <iframe src="https://drive.google.com/file/d/1HmX3u1NDLn1C1lJgzeGBUDpoGamrdB0a/preview" width="640" height="480" allow="autoplay"></iframe>
+          <h2 class="media-title">Video Title 1</h2>
+          <p class="artist">Artist Name 1</p>
+        </div>
+      </li>
+	  <li class="media">
+        <div class="media-info">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14730.636022859882!2d88.4130075!3d22.6292054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fce3b436427%3A0x17e1a15f5b01567d!2sIVY%20Apartment!5e0!3m2!1sen!2sin!4v1710269314829!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h2 class="media-title">Google Maps</h2>
+          <p class="additional-content">This is a Google Maps embed showing a location in New York City.</p>
+        </div>
+      <!-- Add more albums or videos as needed -->
+    </ul>
+	<p style="text-align: center;"><a href="contact.html">Contact Us</a></p>
+  </div>
+</body>
+</html>
