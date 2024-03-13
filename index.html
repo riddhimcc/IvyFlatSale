@@ -109,6 +109,11 @@
       .media-list {
         grid-template-columns: repeat(1, 1fr);
       }
+	  .popup-content {
+		width: 90%; /* Set the width to 90% of the viewport width */
+		height: 90%; /* Set the height to 90% of the viewport height */
+		overflow: auto; /* Enable scrolling if content exceeds viewport */
+	  }
     }
 
     @media (min-width: 601px) and (max-width: 900px) {
@@ -117,6 +122,15 @@
       }
     }
   </style>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7T4WJEP05E"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-7T4WJEP05E');
+	</script>
 </head>
 <body>
   <div class="container">
