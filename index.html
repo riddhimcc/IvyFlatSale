@@ -26,7 +26,7 @@
       text-align: center;
     }
 	.price {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
             color: #d9534f;
         }
@@ -47,7 +47,7 @@
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 14px;
-            font-weight: bold;
+            <!-- font-weight: bold; -->
         }
     .media-list {
       list-style: none;
@@ -107,26 +107,49 @@
     }
 
     .popup-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-    }
+	  position: relative; /* Ensures close button stays inside */
+	  max-width: 90vw;
+	  max-height: 90vh;
+	  overflow: hidden;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  background-color: transparent;
+	  padding: 0;
+	  border-radius: 5px;
+	}
+
+
 
     .popup img {
-      max-width: 100%;
-      max-height: 100%;
-    }
+	  max-width: 90vw; /* Limits the width to 90% of the viewport */
+	  max-height: 90vh; /* Limits the height to 90% of the viewport */
+	  width: auto;
+	  height: auto;
+	  display: block;
+	  margin: auto; /* Centers the image */
+	}
+
 
     .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
+	  position: absolute;
+	  top: 10px;
+	  right: 15px;
+	  font-size: 24px;
+	  font-weight: bold;
+	  color: white;
+	  background-color: red;
+	  border: none;
+	  padding: 8px 12px;
+	  border-radius: 50%;
+	  cursor: pointer;
+	  transition: 0.3s ease-in-out;
+	}
+
+	.close-btn:hover {
+	  background-color: darkred;
+	  transform: scale(1.2);
+	}
 	.media1 {
             margin-top: 20px;
             display: grid;
@@ -181,32 +204,23 @@
 <body>
   <div class="container">
      <h1>2BHK Flat for Re-Sale</h1>
-        <p class="price">Price: Affordable and Negotiable</p>
+        <p class="price">Price:Affordable (Exact Price will be shared personally)</p>
+		<p><strong>Contact:</strong> <a href="https://wa.me/919734883070?text=I%20am%20interested%20in%20the%202BHK%20flat%20for%20sale.%20Please%20provide%20more%20details." target="_blank">Click to Whatsapp</a>		<strong> or Call 📞</strong> <a href="tel:9734883070">9734883070</a></p>
+
+
 		 <div class="details">
-            <span class="detail-tag">Total Floors: G+2</span>
-            <span class="detail-tag">Flat Location: Top Floor (2nd)</span>
-            <span class="detail-tag">Flat Age: 8 Years</span>
-            <span class="detail-tag">Area: 732 sqft</span>
-            <span class="detail-tag">Flooring: Marble</span>
-            <span class="detail-tag">Rooms: 2 Bedrooms, 1 Dining</span>
-            <span class="detail-tag">Kitchen: Semi-Modular</span>
-            <span class="detail-tag">Balcony: 1</span>
-            <span class="detail-tag">Bathroom: 1</span>
-            <span class="detail-tag">Lift: ❌ No Lift</span>
+            <span class="detail-tag">Total Floors: <b>G+2</b></span>
+            <span class="detail-tag">Flat Location: <b>Top Floor (2nd)</b></span>
+            <span class="detail-tag">Flat Age: <b>9 Years</b></span>
+            <span class="detail-tag">Area: <b>732 sqft</b></span>
+            <span class="detail-tag">Flooring: <b>Marble</b></span>
+            <span class="detail-tag">Rooms: <b>2 Bedrooms, 1 Living/Dining</b></span>
+            <span class="detail-tag">Kitchen: <b>Semi-Modular</b></span>
+            <span class="detail-tag">Balcony: <b>1</b></span>
+            <span class="detail-tag">Bathroom: <b>1</b></span>
+            <span class="detail-tag">Lift: <b>❌ No Lift</b></span>
         </div>
-        <!-- <div class="details"> -->
-            <!-- <p><strong>Total Floors:</strong> G+2</p> -->
-            <!-- <p><strong>Flat Location:</strong> Top Floor (2nd)</p> -->
-            <!-- <p><strong>Completion of Constraction:</strong> 2016</p> -->
-            <!-- <p><strong>Purchased on:</strong> 2016</p> -->
-            <!-- <p><strong>Area:</strong> 732 sqft</p> -->
-            <!-- <p><strong>Flooring:</strong> Marble</p> -->
-            <!-- <p><strong>Rooms:</strong> 2 Bedrooms, 1 Dining</p> -->
-            <!-- <p><strong>Kitchen:</strong> Open Kitchen</p> -->
-            <!-- <p><strong>Balcony:</strong> 1</p> -->
-            <!-- <p><strong>Bathroom:</strong> 1</p> -->
-            <!-- <p><strong>Lift:</strong> ❌ No Lift</p> -->
-        <!-- </div> -->
+        
         <p class="location">📍 Location: Bandhab Nagar, near R.N. Guha Road<br>2 mins from Main Road | 8 mins from Nager Bazar | 7 mins from Gora Bazaar</p>
         <h2>Flat Images</h2>
     <ul class="media-list">
@@ -214,7 +228,7 @@
         <img src="Media/main-gate.jpg" alt="Main Door">
         <div class="media-info">
             <h2 class="media-title">Main Door</h2>
-          <p class="artist">Entry from this door</p>
+          <p class="artist">Entry from this main door</p>
         </div>
       </li>
 	  <li class="media" onclick="openPopup('Media/lobby.jpg')">
@@ -300,7 +314,7 @@
                       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14730.636022859882!2d88.4130075!3d22.6292054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fce3b436427%3A0x17e1a15f5b01567d!2sIVY%20Apartment!5e0!3m2!1sen!2sin!4v1710269314829!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
-        <p><strong>Contact:</strong> <a href="https://wa.me/yourwhatsappphonenumber?text=I%20am%20interested%20in%20the%202BHK%20flat%20for%20sale.%20Please%20provide%20more%20details." target="_blank">WhatsApp Us</a></p>
+        
 
   </div>
  
