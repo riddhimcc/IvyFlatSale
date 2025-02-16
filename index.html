@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Albums, Videos, and More</title>
+  <title>2BHK Flat for Re-Sale</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -19,12 +19,36 @@
       background-color: #fff;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	              text-align: center;
     }
 
     h1 {
       text-align: center;
     }
-
+	.price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+ .location {
+            font-size: 18px;
+            color: #5bc0de;
+            margin-top: 10px;
+        }
+		.details {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .detail-tag {
+            background-color: #e0e0e0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
     .media-list {
       list-style: none;
       padding: 0;
@@ -103,7 +127,29 @@
       right: 10px;
       cursor: pointer;
     }
-
+	.media1 {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            text-align: center;
+        }
+        .media1-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .media1 img, .media1 video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .caption1 {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        
     /* Media queries for responsiveness */
     @media (max-width: 600px) {
       .media-list {
@@ -134,40 +180,130 @@
 </head>
 <body>
   <div class="container">
-    <h1>Albums, Videos, and More</h1>
+     <h1>2BHK Flat for Re-Sale</h1>
+        <p class="price">Price: Affordable and Negotiable</p>
+		 <div class="details">
+            <span class="detail-tag">Total Floors: G+2</span>
+            <span class="detail-tag">Flat Location: Top Floor (2nd)</span>
+            <span class="detail-tag">Flat Age: 8 Years</span>
+            <span class="detail-tag">Area: 732 sqft</span>
+            <span class="detail-tag">Flooring: Marble</span>
+            <span class="detail-tag">Rooms: 2 Bedrooms, 1 Dining</span>
+            <span class="detail-tag">Kitchen: Semi-Modular</span>
+            <span class="detail-tag">Balcony: 1</span>
+            <span class="detail-tag">Bathroom: 1</span>
+            <span class="detail-tag">Lift: ❌ No Lift</span>
+        </div>
+        <!-- <div class="details"> -->
+            <!-- <p><strong>Total Floors:</strong> G+2</p> -->
+            <!-- <p><strong>Flat Location:</strong> Top Floor (2nd)</p> -->
+            <!-- <p><strong>Completion of Constraction:</strong> 2016</p> -->
+            <!-- <p><strong>Purchased on:</strong> 2016</p> -->
+            <!-- <p><strong>Area:</strong> 732 sqft</p> -->
+            <!-- <p><strong>Flooring:</strong> Marble</p> -->
+            <!-- <p><strong>Rooms:</strong> 2 Bedrooms, 1 Dining</p> -->
+            <!-- <p><strong>Kitchen:</strong> Open Kitchen</p> -->
+            <!-- <p><strong>Balcony:</strong> 1</p> -->
+            <!-- <p><strong>Bathroom:</strong> 1</p> -->
+            <!-- <p><strong>Lift:</strong> ❌ No Lift</p> -->
+        <!-- </div> -->
+        <p class="location">📍 Location: Bandhab Nagar, near R.N. Guha Road<br>2 mins from Main Road | 8 mins from Nager Bazar | 7 mins from Gora Bazaar</p>
+        <h2>Flat Images</h2>
     <ul class="media-list">
-      <li class="media" onclick="openPopup('https://lh3.googleusercontent.com/drive-viewer/AKGpihblByMpqEjfYHNQYXL80vUSFXxWzmVQ5oTJGrM3vN7yUPNmeuUhsGp3LIVCl25KdbuAbJ5WxkwCqjUGRecXJpGTLmndhg=w1872-h958')">
-        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihblByMpqEjfYHNQYXL80vUSFXxWzmVQ5oTJGrM3vN7yUPNmeuUhsGp3LIVCl25KdbuAbJ5WxkwCqjUGRecXJpGTLmndhg=w1872-h958" alt="Album 1">
+      <li class="media" onclick="openPopup('Media/main-gate.jpg')">
+        <img src="Media/main-gate.jpg" alt="Main Door">
         <div class="media-info">
-          <h2 class="media-title">Album Title 1</h2>
-          <p class="artist">Artist Name 1</p>
+            <h2 class="media-title">Main Door</h2>
+          <p class="artist">Entry from this door</p>
         </div>
       </li>
-	  <li class="media" onclick="openPopup('https://lh3.googleusercontent.com/drive-viewer/AKGpihYcAgagWLlYcTQSTGhWGx5yC_iJlhFh4bYM3ildWvUi7oWv27wk6uTf1U5qrMEz0B1aIM6s7lTgwcDuH3-cd4e_vcr3Hw=w1872-h958')">
-        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYcAgagWLlYcTQSTGhWGx5yC_iJlhFh4bYM3ildWvUi7oWv27wk6uTf1U5qrMEz0B1aIM6s7lTgwcDuH3-cd4e_vcr3Hw=w1872-h958" alt="Album 2">
+	  <li class="media" onclick="openPopup('Media/lobby.jpg')">
+        <img src="Media/lobby.jpg" alt="Lobby">
         <div class="media-info">
-          <h2 class="media-title">Album Title 1</h2>
-          <p class="artist">Artist Name 1</p>
+          <h2 class="media-title">Lobby</h2>
+          <p class="artist">Come through the lobby</p>
         </div>
       </li>
-      <li class="media">
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/bedroom1.jpg" alt="Bedroom 1">
         <div class="media-info">
-          <iframe src="https://drive.google.com/file/d/1HmX3u1NDLn1C1lJgzeGBUDpoGamrdB0a/preview" width="640" height="480" allow="autoplay"></iframe>
-          <h2 class="media-title">Video Title 1</h2>
-          <p class="artist">Artist Name 1</p>
+          <h2 class="media-title">Bedroom 1</h2>
+          <p class="artist">Spacious and well-lit bedroom</p>
         </div>
       </li>
-	  <li class="media">
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/bedroom1-1.jpg" alt="Bedroom 1">
         <div class="media-info">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14730.636022859882!2d88.4130075!3d22.6292054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fce3b436427%3A0x17e1a15f5b01567d!2sIVY%20Apartment!5e0!3m2!1sen!2sin!4v1710269314829!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <h2 class="media-title">Google Maps</h2>
-          <p class="additional-content">This is a Google Maps embed showing a location in New York City.</p>
+          <h2 class="media-title">Bedroom 1</h2>
+          <p class="artist">Spacious and well-lit bedroom</p>
         </div>
+      </li>
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/bedroom2.jpg" alt="Bedroom 2">
+        <div class="media-info">
+          <h2 class="media-title">Bedroom 2</h2>
+          <p class="artist">Cross ventilated well-lit bedroom</p>
+        </div>
+      </li>
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/bedroom2-1.jpg" alt="Bedroom 2">
+        <div class="media-info">
+          <h2 class="media-title">Bedroom 2</h2>
+          <p class="artist">Cross ventilated well-lit bedroom</p>
+        </div>
+      </li>
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/living.jpg" alt="Living cum Dining">
+        <div class="media-info">
+          <h2 class="media-title">Living cum Dining</h2>
+          <p class="artist">Spacious Living cum Dining Area</p>
+        </div>
+      </li>
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/living 1.jpg" alt="Living cum Dining">
+        <div class="media-info">
+          <h2 class="media-title">Living cum Dining</h2>
+          <p class="artist">Spacious Living cum Dining Area</p>
+        </div>
+      </li>
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/balcony.jpg" alt="Balcony">
+        <div class="media-info">
+          <h2 class="media-title">Balcony</h2>
+          <!-- <p class="artist">Cross ventilated well-lit bedroom</p> -->
+        </div>
+      </li>
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/toilet.jpg" alt="Toilet">
+        <div class="media-info">
+          <h2 class="media-title">Toilet</h2>
+          <!-- <p class="artist">Spacious Living cum Dining Area</p> -->
+        </div>
+      </li>
+	  <li class="media" onclick="openPopup('Media/bedroom1.jpg')">
+        <img src="Media/kitchen.jpg" alt="Kitchen">
+        <div class="media-info">
+          <h2 class="media-title">Kitchen</h2>
+          <p class="artist">Open Kitchen with Dining Area</p>
+        </div>
+      </li>
       <!-- Add more albums or videos as needed -->
     </ul>
-    <p style="text-align: center;"><a href="contact.html">Contact Us</a></p>
-  </div>
+	<h2>Flat Video Tour</h2>
+        <div class="media1">
+            <div class="media1-item">
+                <iframe src="https://drive.google.com/file/d/1axNGUnkQ3cwWXjCfnrXmAWfVwhWTkFfu/preview" width="640" height="480" allow="autoplay"></iframe>
+                <p class="caption">Take a virtual tour of the flat</p>
+            </div>
+        </div>
+    <div class="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14730.636022859882!2d88.4130075!3d22.6292054!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89fce3b436427%3A0x17e1a15f5b01567d!2sIVY%20Apartment!5e0!3m2!1sen!2sin!4v1710269314829!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+        </div>
+        <p><strong>Contact:</strong> <a href="https://wa.me/yourwhatsappphonenumber?text=I%20am%20interested%20in%20the%202BHK%20flat%20for%20sale.%20Please%20provide%20more%20details." target="_blank">WhatsApp Us</a></p>
+
+  </div>
+ 
   <div class="popup" id="popup">
     <div class="popup-content">
       <span class="close-btn" onclick="closePopup()">X</span>
